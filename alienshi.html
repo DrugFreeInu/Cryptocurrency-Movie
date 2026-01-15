@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alien Shi</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+    }
 
+    #alien {
+      position: absolute;
+      width: 120px;
+      left: -150px; /* start off screen */
+      top: 50%;
+      transform: translateY(-50%);
+      animation: flyAcross 8s linear infinite;
+    }
+
+    @keyframes flyAcross {
+      0% {
+        left: -150px;
+      }
+      100% {
+        left: calc(100vw + 150px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img id="alien" src="alien.png" alt="Alien Ship" />
+
+</body>
+</html>
